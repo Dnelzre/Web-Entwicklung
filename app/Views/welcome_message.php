@@ -225,7 +225,7 @@
 
     <div class="heroe">
 
-        <h1>Welcome to  ähh ja genau <?= CodeIgniter\CodeIgniter::CI_VERSION ?></h1>
+        <h1>Welcome to our World<?= CodeIgniter\CodeIgniter::CI_VERSION ?></h1>
 
         <h2>HE HE HE HA</h2>
 
