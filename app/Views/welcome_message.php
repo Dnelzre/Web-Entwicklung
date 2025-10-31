@@ -227,7 +227,7 @@
 
         <h1>Welcome to our World<?= CodeIgniter\CodeIgniter::CI_VERSION ?></h1>
 
-        <h2>HE HE HE HA</h2>
+        <h2>HE HE HE HA HA GA</h2>
 
     </div>
 
