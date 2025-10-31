@@ -227,7 +227,7 @@
 
         <h1>Welcome to  ähh ja genau <?= CodeIgniter\CodeIgniter::CI_VERSION ?></h1>
 
-        <h2>The small framework with powerful features</h2>
+        <h2>HE HE HE HA</h2>
 
     </div>
 
