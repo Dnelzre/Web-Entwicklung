@@ -62,8 +62,16 @@
 </div>
 </main>
 
-<footer class="text-center py-4 text-muted">
-    <p>&copy; 2025 Beispielseite</p>
+<footer>
+    <div class="rechts">
+        <span>©Web-Entwicklung Team 03</span>
+    </div>
+
+    <div class="links">
+        <span>Impressum</span>
+        <span>Datenschutz</span>
+        <span>Kontakt</span>
+    </div>
 </footer>
 
 <script>
