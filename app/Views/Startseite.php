@@ -10,31 +10,19 @@
 
     <style>
         body {
-<<<<<<< HEAD
             background: #ffffff ;
-=======
             background: #f7f7f7;
-
-        }
-        footer {
-            background: #002060;
-            color: #fff;
->>>>>>> origin/master
-        }
-        .hero {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #0d6efd, #6610f2);
-            color: #ffffff  ;
-            text-align: center;
         }
         .navbar-expand-lg{
             background: #002060;
             color: #fff;
         }
-        .footer{
+        footer{
             background:#002060;
             color: white;
-
+            padding: 30px 0;
+            font-size: 14px;
+            padding-top: 50px;
         }
     </style>
     <nav class="navbar navbar-expand-lg">
@@ -75,8 +63,8 @@
 
 <footer class="fixed-bottom" class="footer">
     <div class="container d-flex justify-content-between">
-        <span>© 2025 Beispielseite</span>
-        <span>Rechts stehender Text</span>
+        <span>©Web-Entwicklung Team 03 </span>
+        <span>Impressum  Datenschutz  Kontakt</span>
     </div>
 </footer>
 
