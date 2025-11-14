@@ -11,9 +11,11 @@
     <style>
         body {
             background: #f7f7f7;
+
         }
         footer {
-            background: #002060
+            background: #002060;
+            color: #fff;
         }
         .hero {
             padding: 4rem 0;
@@ -23,6 +25,7 @@
         }
         .navbar-expand-lg{
             background: #002060;
+            color: #fff;
         }
     </style>
     <nav class="navbar navbar-expand-lg">
