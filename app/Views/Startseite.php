@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap Beispielseite</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
         body {
@@ -21,46 +22,25 @@
 </head>
 <body>
 <header class="hero">
-    <h1 class="display-4 fw-bold">Willkommen auf meiner Bootstrap Seite</h1>
+    <h1 class="display-4 fw-bold">Willkommen</h1>
     <p class="lead">Eine einfache Beispielseite mit HTML, CSS und JavaScript</p>
     <button class="btn btn-light btn-lg" id="alertButton">Klick mich</button>
 </header>
 
-<main class="container py-5">
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Feature 1</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Feature 2</h5>
-                    <p class="card-text">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Feature 3</h5>
-                    <p class="card-text">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
-                </div>
-            </div>
-        </div>
+<main
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
+</div>
 </main>
 
 <footer class="text-center py-4 text-muted">
     <p>&copy; 2025 Beispielseite</p>
 </footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
     document.getElementById("alertButton").addEventListener("click", () => {
