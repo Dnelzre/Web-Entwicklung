@@ -8,9 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="/assets/css/stylesheet.css">
+</head>
+<body>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
             <img src="./assets/images/WeLogo.svg" width="175" height="75" alt="Logo">

@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-
+        <link rel="stylesheet" href="public/assets/css/stylesheet.css">
     </style>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
