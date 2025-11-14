@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8" />
@@ -7,27 +7,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-<style>
-    body {
-        background-color: #ffffff;
-    }
-
-    footer {
-        background-color: #6cd2bf;
-        color: #fff;
-        padding: 20px 0 10px 0;
-        font-size: 14px;
-    }
-
-    .navbar {
-        background-color: #6cd2bf !important;
-    }
-
-    .navbar .nav-link {
-        color: white !important;
-    }
-
-</style>
+<link rel="stylesheet" type="text/css" href="https://team03.wi1cm.uni-trier.de/public/assets/css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
