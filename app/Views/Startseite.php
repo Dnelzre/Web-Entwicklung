@@ -9,29 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-        body {
-<<<<<<< HEAD
-            background: #ffffff ;
-=======
-            background: #f7f7f7;
-
-        }
-        footer {
-            background: #6cd2bf;
-            color: #fff;
-            padding: 10px 0;
-            font-size: 14px;
-            padding-top: 20px;
->>>>>>> origin/master
-        }
-
-        .nav-link{
-            color: white ;
-        }
-        .navbar-expand-lg{
-            background: #6cd2bf;
-            color: white;
-        }
 
     </style>
     <nav class="navbar navbar-expand-lg">
