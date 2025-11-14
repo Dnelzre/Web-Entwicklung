@@ -12,6 +12,9 @@
         body {
             background: #f7f7f7;
         }
+        footer {
+            background: #002060
+        }
         .hero {
             padding: 4rem 0;
             background: linear-gradient(135deg, #0d6efd, #6610f2);
