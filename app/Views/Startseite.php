@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap Beispielseite</title>
+    <title>Bootstrap Startseite</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
@@ -17,30 +17,22 @@
 
         }
         footer {
-            background: #39b89c;
+            background: #6cd2bf;
             color: #fff;
+            padding: 10px 0;
+            font-size: 14px;
+            padding-top: 20px;
 >>>>>>> origin/master
         }
-        .hero {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #0d6efd, #6610f2);
-            color: #ffffff  ;
-            text-align: center;
-        }
+
         .nav-link{
             color: white ;
         }
         .navbar-expand-lg{
-            background: #39b89c;
+            background: #6cd2bf;
             color: white;
         }
-        .footer{
-            background: #39b89c;
-            color: white;
-            padding: 30px 0;
-            font-size: 14px;
-            padding-top: 50px;
-        }
+
     </style>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
@@ -69,16 +61,14 @@
 
 </header>
 
-<main
-<div
+<main>
 
-</div>
 </main>
 
 <footer class="fixed-bottom" class="footer">
     <div class="container d-flex justify-content-between">
         <span>©Web-Entwicklung Team 03 </span>
-        <span>Impressum  Datenschutz  Kontakt</span>
+        <span>Impressum    Datenschutz    Kontakt</span>
     </div>
 </footer>
 
