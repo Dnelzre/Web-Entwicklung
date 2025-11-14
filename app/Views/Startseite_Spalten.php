@@ -9,8 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-        body {
-<<<<<<< HEAD
+body {
+    <<<<<<< HEAD
             background: #ffffff ;
 =======
             background: #f7f7f7;
@@ -57,7 +57,7 @@
     </nav>
 </head>
 <body>
-<header>
+<header
 
 </header>
 
