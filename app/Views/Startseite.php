@@ -17,7 +17,7 @@
 
         }
         footer {
-            background: #39b89c;
+            background: #89cff0;
             color: #fff;
 >>>>>>> origin/master
         }
@@ -31,11 +31,11 @@
             color: white ;
         }
         .navbar-expand-lg{
-            background: #39b89c;
+            background: #89cff0;
             color: white;
         }
         .footer{
-            background: #39b89c;
+            background: #89cff0;
             color: white;
 
         }
