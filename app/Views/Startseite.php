@@ -19,12 +19,36 @@
             text-align: center;
         }
     </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="public/assets/images/WeLogo.svg" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </head>
 <body>
 <header class="hero">
     <h1 class="display-4 fw-bold">Willkommen</h1>
-    <p class="lead">Eine einfache Beispielseite mit HTML, CSS und JavaScript</p>
-    <button class="btn btn-light btn-lg" id="alertButton">Klick mich</button>
+    <p class="lead">Beispielseite mit HTML, CSS und JavaScript</p>
+    <button class="btn btn-light btn-lg" id="alertButton">Klicken</button>
 </header>
 
 <main
