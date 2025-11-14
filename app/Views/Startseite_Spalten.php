@@ -9,8 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-        body {
-<<<<<<< HEAD
+body {
+    <<<<<<< HEAD
             background: #ffffff ;
 =======
             background: #f7f7f7;
@@ -36,7 +36,7 @@
     </style>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
-            <img src="./assets/images/WeLogo.svg" width="175" height="75" alt="Logo">
+            <img src="./assets/images/WeLogo.svg" width="150" height="50" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -55,16 +55,9 @@
             </ul>
         </div>
     </nav>
-    <div class="container mt-4">
-        <div class="border rounded p-3 bg-white shadow-sm">
-            <h5 class="mb-1">Tasks</h5>
-            <hr>
-            <span>test</span>
-        </div>
-
-    </div>
+</head>
 <body>
-<header>
+<header
 
 </header>
 
