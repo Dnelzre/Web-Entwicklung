@@ -17,7 +17,7 @@
 
         }
         footer {
-            background: #002060;
+            background: #39b89c;
             color: #fff;
 >>>>>>> origin/master
         }
@@ -27,36 +27,33 @@
             color: #ffffff  ;
             text-align: center;
         }
+        .nav-link{
+            color: white ;
+        }
         .navbar-expand-lg{
-            background: #002060;
-            color: #fff;
+            background: #39b89c;
+            color: white;
         }
         .footer{
-            background:#002060;
+            background: #39b89c;
             color: white;
 
         }
     </style>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
-            <img src="public/assets/images/WeLogo.svg" width="40" height="40" alt="">
+            <img src="./assets/images/WeLogo.svg" width="150" height="50" alt="Logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Tasks <span </span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Boards</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link" href="#">Spalten</a>
                 </li>
             </ul>
         </div>
