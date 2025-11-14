@@ -10,26 +10,27 @@
 
     <style>
         body {
-            background: #ffffff ;
+            background: #f7f7f7;
+
+        }
+        footer {
+            background: #002060;
+            color: #fff;
         }
         .hero {
             padding: 4rem 0;
             background: linear-gradient(135deg, #0d6efd, #6610f2);
-            color: #ffffff  ;
+            color: #fff;
             text-align: center;
         }
         .navbar-expand-lg{
             background: #002060;
-        }
-        .footer{
-            background:#002060;
-            color: white;
-
+            color: #fff;
         }
     </style>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
-            <img src="public/assets/images/WeLogo.svg" width="40" height="40" alt="">
+            <img src="public/assets/images/WeLogo.svg" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,20 +54,32 @@
     </nav>
 </head>
 <body>
-<header
-
+<header class="hero">
+    <h1 class="display-4 fw-bold">Willkommen</h1>
+    <p class="lead">Beispielseite mit HTML, CSS und JavaScript</p>
+    <button class="btn btn-light btn-lg" id="alertButton">Klicken</button>
 </header>
 
 <main
-<div
-
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
 </div>
 </main>
 
-<footer class="fixed-bottom" class="footer">
-    <div class="container d-flex justify-content-between">
-        <span>© 2025 Beispielseite</span>
-        <span>Rechts stehender Text</span>
+<footer>
+    <div class="rechts">
+        <span>©Web-Entwicklung Team 03</span>
+    </div>
+
+    <div class="links">
+        <span>Impressum</span>
+        <span>Datenschutz</span>
+        <span>Kontakt</span>
     </div>
 </footer>
 
@@ -75,6 +88,5 @@
         alert("Hallo! Dies ist eine JavaScript-Aktion.");
     });
 </script>
-
 </body>
 </html>
