@@ -1,19 +1,18 @@
 body {
-
-background: #ffffff ;
+    background-color: #ffffff;
 }
+
 footer {
-    background: #6cd2bf;
+    background-color: #6cd2bf;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0 10px 0;
     font-size: 14px;
-    padding-top: 20px;
+}
 
+.navbar {
+    background-color: #6cd2bf !important;
 }
-.nav-link{
-    color: white ;
-}
-.navbar-expand-lg{
-    background: #6cd2bf;
-    color: white;
+
+.navbar .nav-link {
+    color: white !important;
 }

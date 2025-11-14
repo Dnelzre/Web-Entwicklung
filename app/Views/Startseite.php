@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap Startseite</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    body {
+        background-color: #ffffff;
+    }
 
-    <link rel="stylesheet" href="/assets/css/stylesheet.css">
+    footer {
+        background-color: #6cd2bf;
+        color: #fff;
+        padding: 20px 0 10px 0;
+        font-size: 14px;
+    }
+
+    .navbar {
+        background-color: #6cd2bf !important;
+    }
+
+    .navbar .nav-link {
+        color: white !important;
+    }
+
+</style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
