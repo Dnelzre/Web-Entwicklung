@@ -18,8 +18,11 @@
             color: #fff;
             text-align: center;
         }
+        .navbar-expand-lg{
+            background: #002060;
+        }
     </style>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
             <img src="public/assets/images/WeLogo.svg" alt="">
         </a>
