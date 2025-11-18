@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>spalten</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://team03.wi1cm.uni-trier.de/public/assets/css/style.css">
+
+</head>
+
+<body>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
             <img src="./assets/images/WeLogo.svg" width="150" height="50" alt="Logo">
@@ -29,11 +32,7 @@
             </ul>
         </div>
     </nav>
-</head>
-<body>
-<header
 
-</header>
 
 <main>
 
@@ -42,7 +41,7 @@
 <footer class="fixed-bottom" class="footer">
     <div class="container d-flex justify-content-between">
         <span>©Web-Entwicklung Team 03 </span>
-        <span>Impressum    Datenschutz    Kontakt</span>
+        <span><a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a></span>
     </div>
 </footer>
 
