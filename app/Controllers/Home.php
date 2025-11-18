@@ -12,5 +12,8 @@ class Home extends BaseController
     {
         return view('Startseite_Spalten');
     }
-
+    public function formular()
+    {
+        return view('startseite-formular');
+    }
 }

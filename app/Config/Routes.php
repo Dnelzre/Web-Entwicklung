@@ -9,5 +9,6 @@ $routes->get('/', 'Home::index');
 
 $routes->get('Startseite_Spalten', 'Home::spalten');
 
-$routes->get('Startseite', 'spalten::index');
+$routes->get('startseite-formular', 'Home::formular');
+
 

@@ -35,7 +35,7 @@
     <div class="border rounded p-3 bg-white shadow-sm">
     <h2 class="mb-4">Spalten</h2>
         <hr>
-        <a href="#" class="btn btn-primary mb-3">Erstellen</a>
+        <a href="/startseite-formular" class="btn btn-primary mb-3">Erstellen</a>
     <table class="table table-striped table-bordered">
         <tr>
             <th>ID</th>
