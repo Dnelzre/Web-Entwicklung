@@ -27,16 +27,53 @@
                     <a class="nav-link" href="#">Boards</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Startseite_Spalten.php">Spalten</a>
+                    <a class="nav-link" href="/Startseite_Spalten">Spalten</a>
                 </li>
             </ul>
         </div>
     </nav>
 
 </body>
-<header>
 
-</header>
+    <div class="container mt-5">
+        <div class="border rounded p-3 bg-white shadow-sm">
+            <h2 class="mb-4">Spalte Erstellen</h2>
+            <hr>
+            <form>
+                <div class="mb-3">
+                    <label for="spaltenbezeichnung" class="form-label">Spaltenbezeichnung</label>
+                    <input type="text" class="form-control" id="spaltenbezeichnung" placeholder="Bezeichung für die Spalte"">
+                </div>
+
+                <div class="mb-3">
+                    <label for="spaltenbeschreibung" class="form-label">Spaltenbeschreibung</label>
+                    <textarea class="form-control" id="spaltenbeschreibung" rows="2" placeholder=""></textarea>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="sortid" class="form-label">Sortid</label>
+                    <input type="text" class="form-control" id="sortid" placeholder="">
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="board" class="form-label">Board auswählen</label>
+                    <select class="form-select" id="board">
+                        <option selected>Board wählen...</option>
+                        <option value="1">Allgemeine Todos</option>
+                        <option value="2">In Bearbeitung</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" class="btn btn-success me-2">Speichern</button>
+                <button type="reset" class="btn btn-secondary">Abbrechen</button>
+            </form>
+        </div>
+
+        </div>
+    </div>
 
 <main>
 
@@ -49,11 +86,7 @@
     </div>
 </footer>
 
-<script>
-document.getElementById("alertButton").addEventListener("click", () => {
-    alert("Hallo! Dies ist eine JavaScript-Aktion.");
-});
-</script>
+
 
 </body>
 </html>

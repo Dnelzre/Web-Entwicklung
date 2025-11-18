@@ -81,11 +81,7 @@
     </div>
 </footer>
 
-<script>
-    document.getElementById("alertButton").addEventListener("click", () => {
-        alert("Hallo! Dies ist eine JavaScript-Aktion.");
-    });
-</script>
+
 
 </body>
 </html>
