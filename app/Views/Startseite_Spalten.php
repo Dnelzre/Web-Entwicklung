@@ -30,11 +30,13 @@
         </div>
     </nav>
 
-
+</head>
 <div class="container mt-5">
-    <h2 class="mb-4">Meine Tabelle</h2>
+    <div class="border rounded p-3 bg-white shadow-sm">
+    <h2 class="mb-4">Spalten</h2>
+        <hr>
+        <a href="#" class="btn btn-primary mb-3">Erstellen</a>
     <table class="table table-striped table-bordered">
-        <thead class="table-dark">
         <tr>
             <th>ID</th>
             <th>Board</th>
@@ -43,9 +45,7 @@
             <th>Spaltenbeschreibung</th>
             <th>Bearbeiten</th>
         </tr>
-        </thead>
         <tbody>
-        <!-- zeilen -->
         <tr>
             <td>1</td>
             <td>Allgemeine Todos</td>
@@ -53,7 +53,8 @@
             <td>Zu besprechen</td>
             <td>Noch zu besprechende Todos</td>
             <td>
-                <a href="#" class="btn btn-sm btn-primary">Bearbeiten</a>
+                <a href="#" class="text-primary me-2"><i class="fas fa-edit"></i></a>
+                <a href="#" class="text-primary me-2"><i class="fa-solid fa-trash"></i></a>
             </td>
         </tr>
         <tr>
@@ -64,12 +65,14 @@
             <td>Todos die akutell bearbeitet werden</td>
             <td>
                 <a href="#" class="text-primary me-2"><i class="fas fa-edit"></i></a>
-                <a href="#" class="text-danger"><i class="fas fa-trash-alt"></i></a>
+                <a href="#" class="text-primary me-2"><i class="fa-solid fa-trash"></i></a>
             </td>
         </tr>
         </tbody>
     </table>
+    </div>
 </div>
+
 
 <footer class="fixed-bottom" class="footer">
     <div class="container d-flex justify-content-between">
