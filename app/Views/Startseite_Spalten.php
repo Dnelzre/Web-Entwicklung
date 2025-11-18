@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://team03.wi1cm.uni-trier.de/public/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
             <img src="./assets/images/WeLogo.svg" width="175" height="75" alt="Logo">
@@ -29,11 +31,13 @@
             </ul>
         </div>
     </nav>
-
 </head>
+
+<body>
+
     <div class="container mt-5">
     <div class="border rounded p-3 bg-white shadow-sm">
-    <h2 class="mb-4">Spalten</h2>
+    <h3 class="mb-4">Spalten</h3>
         <hr>
         <a href="/startseite-formular" class="btn btn-primary mb-3">Erstellen</a>
 
@@ -86,4 +90,5 @@
 </footer>
 
 </body>
+
 </html>

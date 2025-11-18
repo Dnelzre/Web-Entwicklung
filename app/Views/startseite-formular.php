@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -10,8 +9,6 @@
     <link rel="stylesheet" type="text/css" href="https://team03.wi1cm.uni-trier.de/public/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-</head>
-<body>
 
     <nav class="navbar navbar-expand-lg  navbar-light bg-light">
         <a class="navbar-brand" href="#">
@@ -33,12 +30,13 @@
             </ul>
         </div>
     </nav>
+</head>
 
-</body>
+<body>
 
     <div class="container mt-5">
         <div class="border rounded p-3 bg-white shadow-sm">
-            <h2 class="mb-4">Spalte Erstellen</h2>
+            <h3 class="mb-4">Spalte Erstellen</h3>
             <hr>
             <form>
                 <div class="mb-3">
