@@ -16,3 +16,11 @@ footer {
 .navbar .nav-link {
     color: white !important;
 }
+
+.fixed-row-height td {
+    height: 60px;       /* feste Höhe der Zeilen */
+    vertical-align: middle; /* Inhalt zentrieren */
+    white-space: nowrap; /* verhindert Zeilenumbruch */
+    overflow: hidden;    /* Text, der zu lang ist, wird abgeschnitten */
+    text-overflow: ellipsis; /* "..." für abgeschnittenen Text */
+}
