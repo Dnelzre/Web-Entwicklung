@@ -16,4 +16,8 @@ class Home extends BaseController
     {
         return view('startseite-formular');
     }
+    public function Startseite()
+    {
+        return view('Startseite');
+    }
 }

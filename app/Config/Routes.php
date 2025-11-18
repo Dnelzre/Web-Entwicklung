@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-$routes->get('Startseite', 'Home::index');
+$routes->get('Startseite', 'Home::Startseite');
 
 $routes->get('Startseite_Spalten', 'Home::spalten');
 
