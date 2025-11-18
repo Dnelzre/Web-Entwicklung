@@ -3,14 +3,14 @@ body {
 }
 
 footer {
-    background-color: #6cd2bf;
+    background-color: #64b0df;
     color: #fff;
     padding: 20px 0 10px 0;
     font-size: 14px;
 }
 
 .navbar {
-    background-color: #6cd2bf !important;
+    background-color: #64b0df !important;
 }
 
 .navbar .nav-link {

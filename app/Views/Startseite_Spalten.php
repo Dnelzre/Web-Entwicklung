@@ -18,13 +18,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Tasks<a>
+                    <a class="nav-link" href="/"><i class="fas fa-tasks"></i> Tasks</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Boards</a>
+                    <a class="nav-link" href="#"><i class="fas fa-th-large"></i> Boards</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Spalten</a>
+                    <a class="nav-link" href="#"><i class="fas fa-list"></i> Spalten</a>
                 </li>
             </ul>
         </div>
@@ -36,15 +36,19 @@
     <h2 class="mb-4">Spalten</h2>
         <hr>
         <a href="/startseite-formular" class="btn btn-primary mb-3">Erstellen</a>
-    <table class="table table-striped table-bordered">
-        <tr>
+
+        <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
             <th>ID</th>
             <th>Board</th>
             <th>Sortid</th>
             <th>Spalte</th>
             <th>Spaltenbeschreibung</th>
             <th>Bearbeiten</th>
-        </tr>
+            </tr>
+        </thead>
+
         <tbody>
         <tr>
             <td>1</td>
@@ -57,6 +61,7 @@
                 <a href="#" class="text-primary me-2"><i class="fa-solid fa-trash"></i></a>
             </td>
         </tr>
+
         <tr>
             <td>3</td>
             <td>Allgemeine Todos</td>
