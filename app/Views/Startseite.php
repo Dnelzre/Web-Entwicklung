@@ -93,11 +93,6 @@
     </div>
 
 
-
-<main>
-
-</main>
-
 <footer class="fixed-bottom" class="footer">
     <div class="container d-flex justify-content-between">
         <span>©Web-Entwicklung Team 03 </span>

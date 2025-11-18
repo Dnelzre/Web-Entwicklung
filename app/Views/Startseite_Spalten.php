@@ -31,8 +31,7 @@
     </nav>
 
 </head>
-
-<div class="container mt-5">
+    <div class="container mt-5">
     <div class="border rounded p-3 bg-white shadow-sm">
     <h2 class="mb-4">Spalten</h2>
         <hr>
@@ -74,15 +73,12 @@
     </div>
 </div>
 
-
 <footer class="fixed-bottom" class="footer">
     <div class="container d-flex justify-content-between">
         <span>©Web-Entwicklung Team 03 </span>
         <span><a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a></span>
     </div>
 </footer>
-
-
 
 </body>
 </html>
