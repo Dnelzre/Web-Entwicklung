@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
-            <img src="./assets/images/WeLogo.svg" width="150" height="50" alt="Logo">
+            <img src="./assets/images/WeLogo.svg" width="175" height="75" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
