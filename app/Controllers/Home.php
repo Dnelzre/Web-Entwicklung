@@ -6,7 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('Startseite');
+        echo  view('templates/head');
+        echo view( 'templates/navbar');
+        echo view('templates/footer');
+        return view('Startseite.php');
     }
     public function spalten()
     {
