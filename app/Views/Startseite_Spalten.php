@@ -1,40 +1,5 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>spalten</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://team03.wi1cm.uni-trier.de/public/assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">
-            <img src="./assets/images/WeLogo.svg" width="175" height="75" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/"><i class="fas fa-tasks"></i> Tasks</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-th-large"></i> Boards</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-list"></i> Spalten</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</head>
 
 <body>
-
     <div class="container mt-5">
     <div class="border rounded p-3 bg-white shadow-sm">
     <h3 class="mb-4">Spalten</h3>
@@ -82,13 +47,6 @@
     </div>
 </div>
 
-<footer class="fixed-bottom" class="footer">
-    <div class="container d-flex justify-content-between">
-        <span>©Web-Entwicklung Team 03 </span>
-        <span><a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a></span>
-    </div>
-</footer>
 
 </body>
 
-</html>
