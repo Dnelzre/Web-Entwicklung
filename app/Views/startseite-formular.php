@@ -1,6 +1,5 @@
 <body>
-    <div class="container mt-5">
-        <div class="border rounded p-3 bg-white shadow-sm">
+        <div class="container mt-5" style="margin-bottom: 80px;">
             <h3 class="mb-4">Spalte Erstellen</h3>
             <hr>
             <form>
