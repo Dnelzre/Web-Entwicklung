@@ -5,9 +5,11 @@ body {
 footer {
     background-color: #64b0df;
     color: #fff;
-    padding: 20px 0 10px 0;
+    padding: 10px 0 10px 0;
     font-size: 14px;
+    position: relative;
 }
+
 
 .navbar {
     background-color: #64b0df !important;
