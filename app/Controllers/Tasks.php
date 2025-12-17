@@ -11,33 +11,16 @@ class Tasks extends BaseController
         $this -> TasksModel = new TasksModel();
     }
 
-    public function index_edit() {
-        $data['title'] = "Bearbeiten";
-        $data['tasks'] = $this->TasksModel->gettasks();
+    public function index()
+    {
+        $model = new TasksModel();
 
-        echo view( 'templates/header');
+        $data['personen'] = $model->getData();
+
+        // Views laden und ausgeben
+        echo view('templates/header');
+        echo view('templates/menu');
         echo view('pages/personen', $data);
-        echo view( 'templates/footer');
-
+        echo view('templates/footer');
     }
-
-//    public function index()
-//    {
-//        //Model einbinden
-//        $model = new TasksModel();
-//
-//        //Daten aus Datenbank
-//        $personen = $model->getData();
-//
-//        $data = [
-//            'personen' => $personen,
-//            'title' => 'Personen Übersicht'
-//        ];
-//
-//        // Views laden und ausgeben
-//        echo view('templates/header', $data);
-//        echo view('templates/menu');
-//        echo view('pages/personen', $data);
-//        echo view('templates/footer');
-//    }
 }

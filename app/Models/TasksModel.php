@@ -4,23 +4,20 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TasksModel extends Model
+class PersonenModel extends Model
 {
-    public function getData($id = NULL)
+    protected $table = 'personen';
+    protected $primaryKey = 'id';
+
+    protected $allowedFields = [
+        'vorname',
+        'name',
+        'email',
+        'passwort'
+    ];
+
+    public function getData()
     {
-
-        $this->personen = $this->db->table('personen');
-        $this->personen->select('*');
-
-        if ($id != NULL)
-            $this->personen->where('personen.id', $id);
-
-        $this->personen->orderBy('name');
-        $result = $this->personen->get();
-
-        if ($id != NULL)
-            return $result->getRowArray();
-        else
-            $result = $result->getResultArray();
+        return $this->findAll();
     }
 }
