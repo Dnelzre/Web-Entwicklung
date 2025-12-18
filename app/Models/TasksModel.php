@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class TasksModel extends Model
 {
     protected $table = 'personen';
-    protected $allowedFields = ['vorname', 'name', 'email', 'passwort']; // ggf. anpassen
+    protected $allowedFields = ['vorname', 'name', 'email', 'passwort'];
 
     public function getData()
     {

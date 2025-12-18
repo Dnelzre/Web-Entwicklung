@@ -1,16 +1,5 @@
 <?php
 
-//namespace App\Controllers;
-//
-//class Tasks extends BaseController
-//{
-//    public function index()
-//    {
-//        var_dump('Team 03');
-//    }
-//}
-
-
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
