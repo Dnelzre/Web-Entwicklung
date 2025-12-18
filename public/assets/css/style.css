@@ -3,7 +3,7 @@ body {
 }
 
 footer {
-    background-color: #64b0df;
+    background-color: #002060;
     color: #fff;
     padding: 10px 0 10px 0;
     font-size: 14px;
@@ -12,9 +12,39 @@ footer {
 
 
 .navbar {
-    background-color: #64b0df !important;
+    background-color: #002060 !important;
 }
 
 .navbar .nav-link {
     color: white !important;
+}
+/* Tabelle Personen */
+table.personen {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+table.personen th,
+table.personen td {
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+table.personen thead {
+    background-color: #f9fafb;
+}
+
+table.personen th {
+    font-weight: bold;
+    color: #111827;
+}
+
+table.personen tbody tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+table.personen tbody tr:hover {
+    background-color: #e5e7eb;
 }

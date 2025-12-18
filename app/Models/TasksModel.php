@@ -4,17 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class PersonenModel extends Model
+class TasksModel extends Model
 {
     protected $table = 'personen';
-    protected $primaryKey = 'id';
-
-    protected $allowedFields = [
-        'vorname',
-        'name',
-        'email',
-        'passwort'
-    ];
+    protected $allowedFields = ['vorname', 'name', 'email', 'passwort']; // ggf. anpassen
 
     public function getData()
     {

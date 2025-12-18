@@ -1,6 +1,11 @@
-<h1>Personenübersicht</h1>
+<?= $this->include('templates/head') ?>
 
-<table>
+<body>
+<div class="container mt-5">
+    <div class="border rounded p-3 bg-white shadow-sm">
+        <h3 class="mb-4">Personen-Tabelle</h3>
+        <hr>
+        <table class="personen">
     <thead>
     <tr>
         <th>ID</th>
@@ -22,3 +27,5 @@
     <?php endforeach; ?>
     </tbody>
 </table>
+
+</body>

@@ -4,7 +4,7 @@
 </a>
     <ul class="navbar-nav flex-row">
         <li class="nav-item mx-3">
-                <a class="nav-link" href="/"><i class="fas fa-tasks"></i> Tasks</a>
+                <a class="nav-link" href="/tasks"><i class="fas fa-tasks"></i> Tasks</a>
         </li>
             <li class="nav-item mx-3">
                 <a class="nav-link" href="#"><i class="fas fa-th-large"></i> Boards</a>
