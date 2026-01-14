@@ -1,3 +1,5 @@
+<?= $this->include('templates/head') ?>
+
 <div class="container mt-4">
     <h2>Aufgabenübersicht</h2>
     <div class="row">

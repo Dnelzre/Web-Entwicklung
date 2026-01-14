@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\TaskModel;
 
-class Tasks extends BaseController
+class Task extends BaseController
 {
     public function index()
     {
@@ -14,10 +14,12 @@ class Tasks extends BaseController
         $data['tasks'] = $model->getTasksAlphabetically();
         $data['title'] = "Meine Task-Liste";
 
-        // Laden der Views gemäß Aufgabenstellung
-        echo view('templates/header', $data);
-        echo view('templates/menue');
-        echo view('tasks_view', $data); // Die Body View erhält die Tasks
-        echo view('templates/footer');
+
+        return view('templates/head')
+            . view('templates/navbar')
+            . view('pages/tasks_view', [
+                'tasks_view' => $data['tasks'],
+            ])
+            . view('templates/footer');
     }
 }
