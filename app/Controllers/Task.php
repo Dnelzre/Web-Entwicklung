@@ -10,10 +10,10 @@ class Task extends BaseController
     {
         $model = new TaskModel();
 
-        // Daten aus dem Model holen
-        $data['tasks'] = $model->getTasksAlphabetically();
-        $data['title'] = "Meine Task-Liste";
-
+        $data = [
+            'tasks' => $model->getTasksAlphabetically(),
+            'title' => "Meine Task-Liste"
+        ];
 
 // Rückgabe der verketteten Views
         // Wir übergeben $data an jede View, damit überall auf $title oder $tasks zugegriffen werden kann
