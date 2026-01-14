@@ -1,15 +1,14 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\TasksModel;
+use App\Models\PersonenModel;
 
-class Tasks extends BaseController
+class Personen extends BaseController
 {
     public function index()
     {
-        $model = new TasksModel();
+        $model = new PersonenModel();
         $personen = $model->getData();
 
         return view('templates/head')

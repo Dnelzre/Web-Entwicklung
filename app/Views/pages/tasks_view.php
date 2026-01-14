@@ -22,5 +22,6 @@
         <?php else: ?>
             <p>Keine Tasks gefunden.</p>
         <?php endif; ?>
+
     </div>
 </div>

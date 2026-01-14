@@ -14,7 +14,10 @@ $routes->get('Startseite_Spalten', 'Home::spalten');
 
 $routes->get('startseite-formular', 'Home::formular');
 
-$routes->get('/tasks', 'Tasks::index');
+$routes->get('/personen', 'Personen::index');
+
+$routes->get('/tasks_view', 'Task::index');
+
 
 // Übung 4 – Auto Routing aktivieren
 $routes->setAutoRoute(true);
