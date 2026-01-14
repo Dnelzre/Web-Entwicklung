@@ -15,11 +15,11 @@ class Task extends BaseController
         $data['title'] = "Meine Task-Liste";
 
 
-        return view('templates/head')
-            . view('templates/navbar')
-            . view('pages/tasks_view', [
-                'tasks_view' => $data['tasks'],
-            ])
-            . view('templates/footer');
+// Rückgabe der verketteten Views
+        // Wir übergeben $data an jede View, damit überall auf $title oder $tasks zugegriffen werden kann
+        return view('templates/head', $data)
+            . view('templates/navbar', $data)
+            . view('pages/tasks_view', $data)
+            . view('templates/footer', $data);
     }
 }
