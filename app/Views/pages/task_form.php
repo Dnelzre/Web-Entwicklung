@@ -32,6 +32,7 @@
             <label>ID Spalte</label>
             <div class="col-sm-9">
                 <select name="spaltenid" class="form-select bg-secondary bg-opacity-10 border-1 text-dark">
+                    <option value="0" >---bitte auswählen---</option>
                     <option value="1" >ToDo</option>
                     <option value="2" >In Bearbeitung</option>
                     <option value="3" >Erledigt</option>
@@ -43,6 +44,7 @@
             <label>Erinnerung</label>
             <div class="col-sm-9">
                 <select name="erinnerung" class="form-select bg-secondary bg-opacity-10 border-1 text-dark">
+                    <option value="0" >---bitte auswählen---</option>
                     <option value="1" >Nein</option>
                     <option value="2" >Ja</option>
                 </select>
