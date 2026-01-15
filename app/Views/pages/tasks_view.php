@@ -1,7 +1,12 @@
 <?= $this->include('templates/head') ?>
 
 <div class="container mt-4">
-    <h2>Aufgabenübersicht</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Aufgabenübersicht</h2>
+        <a href="<?=('https://team03.wi1cm.uni-trier.de/public/tasks_form') ?>" class="btn btn-primary">Neu</a>
+        </a>
+    </div>
+
     <div class="row">
         <?php if (!empty($tasks) && is_array($tasks)): ?>
             <?php foreach ($tasks as $task): ?>
@@ -12,12 +17,20 @@
 
                             <p class="card-text"><?= esc($task['notizen']) ?></p>
 
-                            <p class="card-text">
+                            <p class="card-text mb-4">
                                 <small class="text-muted">
                                     <i class="bi bi-clock"></i>
                                     Erinnerung: <?= esc($task['erinnerungsdatum']) ?>
                                 </small>
                             </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between">
+                            <a href="<?=('https://team03.wi1cm.uni-trier.de/public/task/edit/' . $task['id']) ?>" class="btn btn-outline-secondary btn-sm">
+                                <i class="bi bi-pencil"></i> Bearbeiten
+                            </a>
+                            <a href="<?=('https://team03.wi1cm.uni-trier.de/public/task/delete/' . $task['id']) ?>" class="btn btn-outline-danger btn-sm" onclick="return confirm('Möchten Sie diesen Task wirklich löschen?')">
+                                <i class="bi bi-trash"></i> Löschen
+                            </a>
                         </div>
                     </div>
                 </div>

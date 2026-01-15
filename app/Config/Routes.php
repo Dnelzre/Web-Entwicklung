@@ -5,6 +5,9 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+$routes->get('task/create', 'Task::create');
+$routes->get('/tasks_form', 'Task::create');
+$routes->post('tasks_store', 'Task::store');
 
 $routes->get('/', 'Home::index');
 
@@ -18,7 +21,8 @@ $routes->get('/personen', 'Personen::index');
 
 $routes->get('/tasks_view', 'Task::index');
 
+$routes->get('/tasks_form', 'Task::index');
+
 
 // Übung 4 – Auto Routing aktivieren
 $routes->setAutoRoute(true);
-
