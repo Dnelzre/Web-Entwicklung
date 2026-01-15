@@ -3,8 +3,10 @@
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2>Aufgabenübersicht</h2>
-        <a href="<?=('https://team03.wi1cm.uni-trier.de/public/tasks_form') ?>" class="btn btn-primary">Neu</a>
-        </a>
+        <div class="p-3 d-flex">
+            <a href="<?=('https://team03.wi1cm.uni-trier.de/public/tasks_form') ?>" class="btn btn-primary btn-sm me-2">
+                + Neu erstellen</a>
+        </div>
     </div>
 
     <div class="row">
