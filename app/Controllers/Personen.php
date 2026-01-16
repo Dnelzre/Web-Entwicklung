@@ -6,7 +6,7 @@ use App\Models\PersonenModel;
 
 class Personen extends BaseController
 {
-    public function index()
+    public function getindex()
     {
         $model = new PersonenModel();
         $personen = $model->getData();
