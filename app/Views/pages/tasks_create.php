@@ -1,4 +1,5 @@
 <?= $this->include('templates/head') ?>
+
 <?php
 $session = session();
 $errors = $session->getFlashdata('errors') ?? [];

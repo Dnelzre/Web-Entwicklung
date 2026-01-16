@@ -12,29 +12,29 @@
         <div class="row">
             <?php foreach ($tasks as $task): ?>
                 <?php
-                    $get = function($key) use ($task) {
-                        if (is_array($task)) return isset($task[$key]) ? $task[$key] : '';
-                        if (is_object($task)) return isset($task->$key) ? $task->$key : '';
-                        return '';
-                    };
+                $get = function($key) use ($task) {
+                    if (is_array($task)) return isset($task[$key]) ? $task[$key] : '';
+                    if (is_object($task)) return isset($task->$key) ? $task->$key : '';
+                    return '';
+                };
 
-                    $id = $get('id');
-                    $title = $get('tasks');
-                    $notes = $get('notizen');
-                    $person = $get('personenname') ?: trim(($get('vorname') . ' ' . $get('nachname')));
-                    $column = $get('spalte') ?: $get('spaltenid');
-                    $taskType = $get('taskart') ?: $get('taskartenid');
-                    $reminderRaw = $get('erinnerungsdatum');
-                    $reminderFmt = '';
-                    if (!empty($reminderRaw)) {
-                        try {
-                            $dt = new \DateTime($reminderRaw);
-                            $reminderFmt = $dt->format('d.m.Y');
-                        } catch (\Exception $e) {
-                            $reminderFmt = $reminderRaw;
-                        }
+                $id = $get('id');
+                $title = $get('tasks');
+                $notes = $get('notizen');
+                $person = $get('personenname') ?: trim(($get('vorname') . ' ' . $get('nachname')));
+                $column = $get('spalte') ?: $get('spaltenid');
+                $taskType = $get('taskart') ?: $get('taskartenid');
+                $reminderRaw = $get('erinnerungsdatum');
+                $reminderFmt = '';
+                if (!empty($reminderRaw)) {
+                    try {
+                        $dt = new \DateTime($reminderRaw);
+                        $reminderFmt = $dt->format('d.m.Y');
+                    } catch (\Exception $e) {
+                        $reminderFmt = $reminderRaw;
                     }
-                    $done = $get('erledigt');
+                }
+                $done = $get('erledigt');
                 ?>
 
                 <div class="col-12 col-sm-6 col-md-4 mb-4">

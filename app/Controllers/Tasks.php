@@ -15,6 +15,7 @@ class Tasks extends BaseController
         $tasks = $taskModel->getTasksWithDetails();
         $data = [
             'tasks' => $tasks,
+            // Use the hosted base URL without web/index.php
             'base_url' => 'https://team03.wi1cm.uni-trier.de/public'
         ];
         return view('templates/head')
@@ -22,6 +23,7 @@ class Tasks extends BaseController
             . view('pages/tasks_liste', $data)
             . view('templates/footer');
     }
+
     public function getCreate()
     {
         $taskartenModel = new TaskartenModel();
@@ -41,62 +43,38 @@ class Tasks extends BaseController
         return view('templates/footer');
     }
 
+
     public function postSubmit()
-    {
-        $taskModel = new TaskModel();
-        $taskId = $this->request->getPost('task_id');
+{
+    $taskModel = new TaskModel();
 
-        $rules = [
-            'taskartenid' => 'required|integer',
-            'personenid' => 'required|integer',
-            'spaltenid' => 'required|integer',
-            'tasks' => 'required|max_length[255]'
-        ];
+    $rules = [
+        'taskartenid' => 'required|integer',
+        'personenid'  => 'required|integer',
+        'spaltenid'   => 'required|integer',
+        'tasks'       => 'required|max_length[255]'
+    ];
 
-        if (! $this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
+    if (!$this->validate($rules)) {
+        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+    }
 
-        $data = [
-            'personenid' => $this->request->getPost('personenid'),
-            'taskartenid' => $this->request->getPost('taskartenid'),
-            'spaltenid' => $this->request->getPost('spaltenid'),
-            'tasks' => $this->request->getPost('tasks'),
-            'erinnerungsdatum' => $this->request->getPost('erinnerungsdatum'),
-            'erinnerung' => $this->request->getPost('erinnerung'),
-            'notizen' => $this->request->getPost('notizen'),
-            // Checkbox 'erledigt' senden wir als 1/0
-            'erledigt' => $this->request->getPost('erledigt') ? 1 : 0,
-        ];
+    $data = [
+        'personenid'      => $this->request->getPost('personenid'),
+        'taskartenid'     => $this->request->getPost('taskartenid'),
+        'spaltenid'       => $this->request->getPost('spaltenid'),
+        'tasks'           => $this->request->getPost('tasks'),
+        'erinnerungsdatum'=> $this->request->getPost('erinnerungsdatum'),
+        'erinnerung'      => $this->request->getPost('erinnerung') ? 1 : 0,
+        'notizen'         => $this->request->getPost('notizen'),
+        'erledigt'        => 0,
+        'geloescht'       => 0,
+        'sortid'          => 1,
+        'erstelldatum'    => date('Y-m-d H:i:s'),
+    ];
 
-        if ($taskId) {
-
-            $taskModel->update($taskId, $data);
-        } else {
-
-            $db = \Config\Database::connect();
-            $query = $db->query('SELECT id FROM tasks ORDER BY id ASC');
-            $rows = $query->getResultArray();
-
-            $nextId = 1;
-            foreach ($rows as $r) {
-                $existing = (int) $r['id'];
-                if ($existing === $nextId) {
-                    $nextId++;
-                } elseif ($existing > $nextId) {
-                    break;
-                }
-            }
-
-            $data['id'] = $nextId;
-            $data['sortid'] = 1;
-            $data['erstelldatum'] = date('Y-m-d H:i:s');
-            $data['geloescht'] = 0;
-            $taskModel->insert($data);
-        }
-
-
-        return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
+    $taskModel->insert($data);
+return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
     }
 
     public function getEdit($id)
@@ -127,6 +105,7 @@ class Tasks extends BaseController
         $taskModel = new TaskModel();
         $taskId = $this->request->getPost('task_id');
 
+        // Validation rules: Taskart, Person und Spalte sind erforderlich
         $rules = [
             'taskartenid' => 'required|integer',
             'personenid' => 'required|integer',
@@ -134,7 +113,7 @@ class Tasks extends BaseController
             'tasks' => 'required|max_length[255]'
         ];
 
-        if (! $this->validate($rules)) {
+        if (!$this->validate($rules)) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
@@ -146,7 +125,7 @@ class Tasks extends BaseController
             'erinnerungsdatum' => $this->request->getPost('erinnerungsdatum'),
             'erinnerung' => $this->request->getPost('erinnerung'),
             'notizen' => $this->request->getPost('notizen'),
-
+            // Checkbox 'erledigt' senden wir als 1/0
             'erledigt' => $this->request->getPost('erledigt') ? 1 : 0,
         ];
 

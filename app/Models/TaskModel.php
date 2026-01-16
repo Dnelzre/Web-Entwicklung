@@ -10,9 +10,19 @@ class TaskModel extends Model
     protected $primaryKey = 'id';
 
     protected $allowedFields = [
-        'id', 'tasks', 'taskartenid', 'personenid', 'spaltenid',
-        'erinnerungsdatum', 'erinnerung', 'notizen', 'erledigt', 'geloescht'
+        'id',
+        'tasks',
+        'taskartenid',
+        'personenid',
+        'spaltenid',
+        'erinnerungsdatum',
+        'erinnerung',
+        'notizen',
+        'erledigt',
+        'geloescht',
+        'erstelldatum'
     ];
+
 
     public function getTasksWithDetails()
     {

@@ -6,9 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 /**
-$routes->get('task/create', 'Tasks::create');
-$routes->get('/tasks_form', 'Tasks::create');
-$routes->post('tasks_store', 'Tasks::store');
+
 
 $routes->get('/', 'Home::index');
 
