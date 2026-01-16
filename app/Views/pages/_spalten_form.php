@@ -1,4 +1,4 @@
-<!-- Reines visuelles Formular-Partial für Spalten (kein PHP, keine Logik) -->
+
 <form action="#" method="post">
 
     <div class="mb-3 form-floating">

@@ -1,5 +1,5 @@
 <style>
-/* Hover-Hervorhebung für Navbar-Links */
+
 .navbar .nav-item .nav-link {
     padding: 0.35rem 0.6rem;
     border-radius: 0.5rem;
@@ -9,16 +9,15 @@
     gap: .5rem;
 }
 
-/* leichter Hintergrund und Schatten beim Hover - jetzt leicht durchsichtiges Weiß */
 .navbar .nav-item .nav-link:hover,
 .navbar .nav-item .nav-link:focus {
-    background-color: rgba(255, 255, 255, 0.12); /* leicht durchsichtiges Weiß */
+    background-color: rgba(255, 255, 255, 0.12);
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transform: translateY(-2px);
     text-decoration: none;
 }
 
-/* kleiner optischer Effekt für das Icon */
+
 .navbar .nav-item .nav-link i {
     transition: transform .12s ease;
 }
@@ -27,7 +26,7 @@
     transform: translateY(-2px);
 }
 
-/* Respect reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
     .navbar .nav-item .nav-link,
     .navbar .nav-item .nav-link i {

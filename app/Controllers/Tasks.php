@@ -15,7 +15,6 @@ class Tasks extends BaseController
         $tasks = $taskModel->getTasksWithDetails();
         $data = [
             'tasks' => $tasks,
-            // Use the hosted base URL without web/index.php
             'base_url' => 'https://team03.wi1cm.uni-trier.de/public'
         ];
         return view('templates/head')
@@ -71,11 +70,10 @@ class Tasks extends BaseController
         ];
 
         if ($taskId) {
-            // Update existing task
+
             $taskModel->update($taskId, $data);
         } else {
-            // Create new task
-            // Finde die niedrigste freie ID (kleinste positive ganze Zahl nicht in der Tabelle)
+
             $db = \Config\Database::connect();
             $query = $db->query('SELECT id FROM tasks ORDER BY id ASC');
             $rows = $query->getResultArray();
@@ -86,7 +84,7 @@ class Tasks extends BaseController
                 if ($existing === $nextId) {
                     $nextId++;
                 } elseif ($existing > $nextId) {
-                    break; // $nextId ist frei
+                    break;
                 }
             }
 
@@ -97,7 +95,7 @@ class Tasks extends BaseController
             $taskModel->insert($data);
         }
 
-        // Redirect to the hosted tasks index (without web/index.php)
+
         return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
     }
 
@@ -129,7 +127,6 @@ class Tasks extends BaseController
         $taskModel = new TaskModel();
         $taskId = $this->request->getPost('task_id');
 
-        // Validation rules: Taskart, Person und Spalte sind erforderlich
         $rules = [
             'taskartenid' => 'required|integer',
             'personenid' => 'required|integer',
@@ -149,7 +146,7 @@ class Tasks extends BaseController
             'erinnerungsdatum' => $this->request->getPost('erinnerungsdatum'),
             'erinnerung' => $this->request->getPost('erinnerung'),
             'notizen' => $this->request->getPost('notizen'),
-            // Checkbox 'erledigt' senden wir als 1/0
+
             'erledigt' => $this->request->getPost('erledigt') ? 1 : 0,
         ];
 

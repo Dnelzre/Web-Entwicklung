@@ -7,7 +7,6 @@
         </div>
         <div class="card-body">
             <div class="mb-3">
-                <!-- Button öffnet Modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#spaltenCreateModal">Erstellen</button>
             </div>
 
@@ -50,7 +49,6 @@
     </div>
 </div>
 
-<!-- Modal für Spalten-Erstellung -->
 <div class="modal fade" id="spaltenCreateModal" tabindex="-1" aria-labelledby="spaltenCreateModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
