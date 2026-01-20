@@ -12,14 +12,12 @@ class SpaltenModel extends Model
 
     public function getData()
     {
-        // Builder über die Spalten-Tabelle
-        $builder = $this->db->table($this->table . ' s');
-
-        // Selektiere benötigte Felder und den Namen des zugehörigen Boards (falls vorhanden)
-        $builder->select("s.id, s.sortid, s.spalte, s.spaltenbeschreibung, s.boardsid, b.name AS boardname");
-        $builder->join('boards b', 'b.id = s.boardsid', 'left');
-        $builder->orderBy('s.sortid', 'ASC');
-
-        return $builder->get()->getResultArray();
+        // Holt die Spalten und verknüpft sie mit der Tabelle 'boards'
+        return $this->db->table('spalten s')
+            ->select('s.*, b.name as boardname')
+            ->join('boards b', 'b.id = s.boardsid', 'left')
+            ->orderBy('s.sortid', 'ASC')
+            ->get()
+            ->getResultArray();
     }
 }

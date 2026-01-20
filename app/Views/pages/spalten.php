@@ -1,14 +1,22 @@
-<?= $this->include('templates/head') ?>
-
 <div class="container mt-4">
     <div class="card shadow-sm">
-        <div class="card-header bg-white">
-            <h2 class="mb-1">Spalten</h2>
+        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">Spalten</h2>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#spaltenCreateModal">
+                <i class="bi bi-plus-lg"></i> Neu
+            </button>
         </div>
         <div class="card-body">
-            <div class="mb-3">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#spaltenCreateModal">Erstellen</button>
-            </div>
+
+            <?php if (session()->getFlashdata('errors')): ?>
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        <?php foreach (session()->getFlashdata('errors') as $error): ?>
+                            <li><?= esc($error) ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
 
             <table class="table table-bordered table-striped">
                 <thead class="table-light">
@@ -18,46 +26,48 @@
                     <th>Sortid</th>
                     <th>Spalte</th>
                     <th>Spaltenbeschreibung</th>
-                    <th>Bearbeiten</th>
+                    <th>Aktionen</th>
                 </tr>
                 </thead>
-
                 <tbody>
-                <?php if (!empty($spalten) && is_array($spalten)): ?>
+                <?php if (!empty($spalten)): ?>
                     <?php foreach ($spalten as $s): ?>
                         <tr>
-                            <td><?= htmlspecialchars($s['id'] ?? '', ENT_QUOTES, 'UTF-8') ?></td>
-                            <td><?= htmlspecialchars($s['boardsid'] ?? '', ENT_QUOTES, 'UTF-8') ?></td>
-                            <td><?= htmlspecialchars($s['sortid'] ?? '', ENT_QUOTES, 'UTF-8') ?></td>
-                            <td><?= htmlspecialchars($s['spalte'] ?? '', ENT_QUOTES, 'UTF-8') ?></td>
-                            <td><?= htmlspecialchars($s['spaltenbeschreibung'] ?? '', ENT_QUOTES, 'UTF-8') ?></td>
+                            <td><?= esc($s['id']) ?></td>
+                            <td><?= esc($s['boardname']) ?></td> <td><?= esc($s['sortid']) ?></td>
+                            <td><?= esc($s['spalte']) ?></td>
+                            <td><?= esc($s['spaltenbeschreibung']) ?></td>
                             <td>
-                                <a href="#" class="text-primary me-2"><i class="bi bi-pencil"></i></a>
-                                <a href="#" class="text-danger"><i class="bi bi-trash"></i></a>
+                                <a href="<?=('https://team03.wi1cm.uni-trier.de/public/spalten/edit/'.$s['id']) ?>" class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a href="<?= ('https://team03.wi1cm.uni-trier.de/public/spalten/delete/'.$s['id']) ?>"
+                                   class="btn btn-sm btn-outline-danger"
+                                   onclick="return confirm('Möchten Sie diese Spalte wirklich löschen?')">
+                                    <i class="bi bi-trash"></i>
+                                </a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
-                    <tr>
-                        <td colspan="6" class="text-center">Keine Spalten vorhanden.</td>
-                    </tr>
+                    <tr><td colspan="6" class="text-center">Keine Spalten vorhanden.</td></tr>
                 <?php endif; ?>
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="spaltenCreateModal" tabindex="-1" aria-labelledby="spaltenCreateModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal fade" id="spaltenCreateModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="spaltenCreateModalLabel">Neue Spalte erstellen</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title">Neue Spalte erstellen</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <?= $this->include('pages/_spalten_form') ?>
+                <?php $data['formAction'] = ('https://team03.wi1cm.uni-trier.de/public/spalten/submit'); ?>
+                <?= view('pages/_spalten_form', $data) ?>
             </div>
         </div>
     </div>

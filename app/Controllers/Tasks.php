@@ -72,7 +72,6 @@ class Tasks extends BaseController
         'sortid'          => 1,
         'erstelldatum'    => date('Y-m-d H:i:s'),
     ];
-
     $taskModel->insert($data);
 return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
     }
@@ -103,14 +102,12 @@ return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
     public function postEdit($id)
     {
         $taskModel = new TaskModel();
-        $taskId = $this->request->getPost('task_id');
 
-        // Validation rules: Taskart, Person und Spalte sind erforderlich
         $rules = [
             'taskartenid' => 'required|integer',
-            'personenid' => 'required|integer',
-            'spaltenid' => 'required|integer',
-            'tasks' => 'required|max_length[255]'
+            'personenid'  => 'required|integer',
+            'spaltenid'   => 'required|integer',
+            'tasks'       => 'required|max_length[255]'
         ];
 
         if (!$this->validate($rules)) {
@@ -118,18 +115,18 @@ return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
         }
 
         $data = [
-            'personenid' => $this->request->getPost('personenid'),
-            'taskartenid' => $this->request->getPost('taskartenid'),
-            'spaltenid' => $this->request->getPost('spaltenid'),
-            'tasks' => $this->request->getPost('tasks'),
-            'erinnerungsdatum' => $this->request->getPost('erinnerungsdatum'),
-            'erinnerung' => $this->request->getPost('erinnerung'),
-            'notizen' => $this->request->getPost('notizen'),
-            // Checkbox 'erledigt' senden wir als 1/0
-            'erledigt' => $this->request->getPost('erledigt') ? 1 : 0,
+            'personenid'      => $this->request->getPost('personenid'),
+            'taskartenid'     => $this->request->getPost('taskartenid'),
+            'spaltenid'       => $this->request->getPost('spaltenid'),
+            'tasks'           => $this->request->getPost('tasks'),
+            'erinnerungsdatum'=> $this->request->getPost('erinnerungsdatum'),
+            'erinnerung'      => $this->request->getPost('erinnerung') ? 1 : 0,
+            'notizen'         => $this->request->getPost('notizen'),
+            'erledigt'        => $this->request->getPost('erledigt') ? 1 : 0,
         ];
 
-        $taskModel->update($taskId, $data);
+        $taskModel->update($id, $data);
+
 
         return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
     }
