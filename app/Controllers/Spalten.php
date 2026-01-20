@@ -61,4 +61,24 @@ class Spalten extends BaseController
         $model->delete($id);
         return redirect()->to('https://team03.wi1cm.uni-trier.de/public/spalten');
     }
+    public function getEdit($id)
+    {
+        $model = new SpaltenModel();
+        $spalte = $model->find($id);
+
+        if (!$spalte) {
+            return redirect()->to('https://team03.wi1cm.uni-trier.de/public/spalten');
+        }
+
+        $data = [
+            'spalte' => $spalte,
+            'title'  => 'Spalte bearbeiten',
+            'formAction' => 'https://team03.wi1cm.uni-trier.de/public/spalten/submit/' . $id
+        ];
+
+        return view('templates/head')
+            . view('templates/navbar')
+            . view('pages/spalten_edit', $data)
+            . view('templates/footer');
+    }
 }
