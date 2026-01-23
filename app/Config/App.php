@@ -16,7 +16,8 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'https://team03.wi1cm.uni-trier.de/web/';
+    // Use the public folder as base URL on the production host
+    public string $baseURL = 'https://team03.wi1cm.uni-trier.de/public/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
@@ -40,7 +41,8 @@ class App extends BaseConfig
      * something else. If you have configured your web server to remove this file
      * from your site URIs, set this variable to an empty string.
      */
-    public string $indexPage = 'index.php';
+    // We use URL rewriting via .htaccess, so no index.php in generated URLs
+    public string $indexPage = '';
 
     /**
      * --------------------------------------------------------------------------

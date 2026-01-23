@@ -6,15 +6,29 @@ use App\Models\PersonenModel;
 use App\Models\TaskModel;
 use App\Models\TaskartenModel;
 use App\Models\SpaltenModel;
+use App\Models\BoardsModel;
 
 class Tasks extends BaseController
 {
     public function getindex()
     {
         $taskModel = new TaskModel();
+
+        // Optionaler Board-Filter (GET param 'board')
+        $selectedBoard = $this->request->getGet('board');
+
         $tasks = $taskModel->getTasksWithDetails();
+
+        $spaltenModel = new SpaltenModel();
+        $taskartenModel = new TaskartenModel();
+        $boardsModel = new BoardsModel();
+
         $data = [
             'tasks' => $tasks,
+            'spalten' => $spaltenModel->getData($selectedBoard),
+            'taskarten' => $taskartenModel->getData(),
+            'boards' => $boardsModel->getData(),
+            'selectedBoard' => $selectedBoard,
             // Use the hosted base URL without web/index.php
             'base_url' => 'https://team03.wi1cm.uni-trier.de/public'
         ];

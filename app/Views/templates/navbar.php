@@ -10,7 +10,7 @@
             </a>
         </li>
         <li class="nav-item mx-3">
-            <a class="nav-link" href="#"><i class="fas fa-th-large"></i> Boards</a>
+            <a class="nav-link" href="https://team03.wi1cm.uni-trier.de/public/boards"><i class="fas fa-th-large"></i> Boards</a>
         </li>
         <li class="nav-item mx-3">
             <a class="nav-link" href="https://team03.wi1cm.uni-trier.de/public/spalten">

@@ -4,6 +4,8 @@
 $session = session();
 $errors = $session->getFlashdata('errors') ?? [];
 $old = $session->getFlashdata('_ci_old_input') ?? [];
+$task = $task ?? null;
+$isEdit = !empty($task);
 ?>
 <body>
 <div class="container mt-5">
@@ -12,7 +14,7 @@ $old = $session->getFlashdata('_ci_old_input') ?? [];
             <div class="card shadow-sm">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="mb-0"><?php echo isset($task) ? 'Task bearbeiten' : 'Neuen Task anlegen'; ?></h4>
+                        <h4 class="mb-0"><?= $isEdit ? 'Task bearbeiten' : 'Neuen Task anlegen' ?></h4>
                         <small class="text-muted">Pflichtfelder sind mit <span class="text-danger">*</span> gekennzeichnet</small>
                     </div>
 
@@ -26,7 +28,7 @@ $old = $session->getFlashdata('_ci_old_input') ?? [];
                         </div>
                     <?php endif; ?>
 
-                    <form action="<?= isset($base_url) ? $base_url . '/tasks/submit' : '/tasks/submit' ?>" method="post">
+                    <form action="<?= $isEdit ? ('https://team03.wi1cm.uni-trier.de/public/tasks/edit/' . rawurlencode($task['id'] ?? $task->id)) : 'https://team03.wi1cm.uni-trier.de/public/tasks/submit' ?>" method="post">
 
                         <input type="hidden" name="task_id" value="<?= htmlspecialchars($old['task_id'] ?? ($task['id'] ?? ''), ENT_QUOTES, 'UTF-8') ?>">
 
@@ -110,7 +112,7 @@ $old = $session->getFlashdata('_ci_old_input') ?? [];
                             </div>
 
                             <div>
-                                <a href="<?= isset($base_url) ? $base_url . '/tasks' : '/tasks' ?>" class="btn btn-secondary me-2">Abbrechen</a>
+                                <a href="https://team03.wi1cm.uni-trier.de/public/tasks" class="btn btn-secondary me-2">Abbrechen</a>
                                 <button type="submit" class="btn btn-success"><?php echo isset($task) ? 'Aktualisieren' : 'Speichern'; ?></button>
                             </div>
                         </div>
