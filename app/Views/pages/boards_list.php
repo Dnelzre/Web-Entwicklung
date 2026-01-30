@@ -1,12 +1,15 @@
 <?= $this->include('templates/head') ?>
 
 <div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>Boards</h2>
-        <a href="https://team03.wi1cm.uni-trier.de/public/boards/create" class="btn btn-primary btn-sm">+ Neues Board</a>
+    <div class="card shadow-sm">
+    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+        <h2 class="mb-0">Board</h2>
+        <a href="https://team03.wi1cm.uni-trier.de/public/boards/create" class="btn btn-primary">+ Neues Board</a>
     </div>
 
-    <?php if (session()->getFlashdata('success')): ?>
+        <div class="card-body">
+
+        <?php if (session()->getFlashdata('success')): ?>
         <div class="alert alert-success"><?= htmlspecialchars(session()->getFlashdata('success'), ENT_QUOTES, 'UTF-8') ?></div>
     <?php endif; ?>
     <?php if ($errs = session()->getFlashdata('errors')): ?>
@@ -21,9 +24,9 @@
 
     <?php if (!empty($boards) && is_array($boards)): ?>
         <div class="card shadow-sm">
-            <div class="card-body p-0">
-                <table class="table table-striped mb-0">
-                    <thead>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-light">
                         <tr>
                             <th style="width:10%">ID</th>
                             <th>Bezeichnung</th>
@@ -49,4 +52,6 @@
         <div class="alert alert-info">Keine Boards vorhanden.</div>
     <?php endif; ?>
 
+        </div>
+    </div>
 </div>

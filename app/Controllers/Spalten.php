@@ -11,6 +11,7 @@ class Spalten extends BaseController
     public function getIndex()
     {
         $model = new SpaltenModel();
+
         $data = [
             'spalten' => $model->getData(),
             'title'   => 'Spalten Verwaltung'
