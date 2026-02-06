@@ -19,10 +19,6 @@ class Tasks extends BaseController
         $selectedBoard = $this->request->getGet('board');
         $tasks = $taskModel->getTasksWithDetails();
 
-//        $selectedBoard = $this->request->getGet('board');
-//
-//        $tasks = $taskModel->getTasksWithDetails($selectedBoard);
-
         $spaltenModel = new SpaltenModel();
         $taskartenModel = new TaskartenModel();
         $boardsModel = new BoardsModel();
