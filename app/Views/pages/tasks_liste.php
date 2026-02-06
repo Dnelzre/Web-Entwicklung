@@ -33,7 +33,6 @@
     <?php endif; ?>
 
     <?php
-    // Prepare helper to access task attributes
     $get = function($task, $key) {
         if (is_array($task)) return isset($task[$key]) ? $task[$key] : '';
         if (is_object($task)) return isset($task->$key) ? $task->$key : '';
