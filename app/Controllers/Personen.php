@@ -6,10 +6,33 @@ use App\Models\PersonenModel;
 
 class Personen extends BaseController
 {
-    public function getindex()
+//    public function getindex()
+//    {
+//        $model = new PersonenModel();
+//        $personen = $model->getData();
+//
+//        return view('templates/head')
+//            . view('templates/navbar')
+//            . view('pages/personen', [
+//                'personen' => $personen
+//            ])
+//            . view('templates/footer');
+//    }
+//}
+
+    public function getIndex()
     {
         $model = new PersonenModel();
-        $personen = $model->getData();
+        $search = $this->request->getGet('search');
+
+        if (!empty($search)) {
+            $personen = $model
+                ->like('vorname', $search)
+                ->orLike('name', $search)
+                ->findAll();
+        } else {
+            $personen = $model->getData();
+        }
 
         return view('templates/head')
             . view('templates/navbar')

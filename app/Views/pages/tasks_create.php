@@ -7,6 +7,7 @@ $old = $session->getFlashdata('_ci_old_input') ?? [];
 $task = $task ?? null;
 $isEdit = !empty($task);
 ?>
+
 <body>
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -116,7 +117,6 @@ $isEdit = !empty($task);
                                 <button type="submit" class="btn btn-success"><?php echo isset($task) ? 'Aktualisieren' : 'Speichern'; ?></button>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>

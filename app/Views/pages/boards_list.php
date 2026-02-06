@@ -2,10 +2,11 @@
 
 <div class="container mt-4">
     <div class="card shadow-sm">
-    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-        <h2 class="mb-0">Board</h2>
-        <a href="https://team03.wi1cm.uni-trier.de/public/boards/create" class="btn btn-primary">+ Neues Board</a>
-    </div>
+
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Board</h4>
+            <a href="https://team03.wi1cm.uni-trier.de/public/boards/create" class="btn btn-primary btn-sm">+ Neu erstellen</a>
+        </div>
 
         <div class="card-body">
 
@@ -20,11 +21,10 @@
                 <?php endforeach; ?>
             </ul>
         </div>
+
     <?php endif; ?>
 
     <?php if (!empty($boards) && is_array($boards)): ?>
-        <div class="card shadow-sm">
-            <div class="card-body">
                 <table class="table table-bordered table-striped">
                     <thead class="table-light">
                         <tr>
@@ -46,8 +46,6 @@
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-            </div>
-        </div>
     <?php else: ?>
         <div class="alert alert-info">Keine Boards vorhanden.</div>
     <?php endif; ?>

@@ -1,16 +1,27 @@
-<?= $this->include('templates/head') ?>
-
-<div class="container mt-5 mb-5">
+<div class="container mt-4">
     <div class="card shadow-sm">
-        <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h3 class="mb-0">Personen</h3>
-                <div class="d-flex">
-                    <input type="search" class="form-control form-control-sm me-2" placeholder="Suche Personen..." aria-label="Suche">
-                    <a href="/personen/create" class="btn btn-primary btn-sm">Neu erstellen</a>
-                </div>
-            </div>
 
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Personen</h4>
+                <div class="d-flex">
+                    <form method="get" class="d-flex me-2">
+                        <input
+                                type="search"
+                                name="search"
+                                class="form-control form-control-sm"
+                                placeholder="Suche Personen..."
+                                value="<?= htmlspecialchars($_GET['search'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                        >
+                        <button type="submit" class="btn btn-outline-secondary btn-sm ms-1">
+                            Suchen
+                        </button>
+                    </form>
+
+                    <a href="/personen/create" class="btn btn-primary btn-sm">+ Neu anlegen</a>
+                </div>
+        </div>
+
+        <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-striped table-hover align-middle">
                     <thead class="table-light">

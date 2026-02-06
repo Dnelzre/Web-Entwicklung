@@ -1,13 +1,18 @@
 <div class="container mt-4">
     <div class="card shadow-sm">
-        <div class="card-header bg-white d-flex justify-content-between align-items-center">
-            <h2 class="mb-0">Spalten</h2>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#spaltenCreateModal">
-                <i class="bi bi-plus-lg"></i> Neu
-            </button>
-        </div>
-        <div class="card-body">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">Spalten</h4>
+                <button
+                        type="button"
+                        class="btn btn-primary btn-sm"
+                        data-bs-toggle="modal"
+                        data-bs-target="#spaltenCreateModal"
+                >
+                    + Neu erstellen
+                </button>
+            </div>
 
+        <div class="card-body">
             <?php if (session()->getFlashdata('errors')): ?>
                 <div class="alert alert-danger">
                     <ul class="mb-0">
@@ -54,20 +59,19 @@
                 <?php endif; ?>
                 </tbody>
             </table>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="spaltenCreateModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Neue Spalte erstellen</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <?php $data['formAction'] = ('https://team03.wi1cm.uni-trier.de/public/spalten/submit'); ?>
-                <?= view('pages/_spalten_form', $data) ?>
+            <div class="modal fade" id="spaltenCreateModal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Neue Spalte erstellen</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                         </div>
+                        <div class="modal-body">
+                         <?php $data['formAction'] = ('https://team03.wi1cm.uni-trier.de/public/spalten/submit'); ?>
+                         <?= view('pages/_spalten_form', $data) ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

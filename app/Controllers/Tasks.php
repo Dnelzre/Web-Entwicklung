@@ -15,9 +15,13 @@ class Tasks extends BaseController
         $taskModel = new TaskModel();
 
         // Optionaler Board-Filter (GET param 'board')
-        $selectedBoard = $this->request->getGet('board');
 
+        $selectedBoard = $this->request->getGet('board');
         $tasks = $taskModel->getTasksWithDetails();
+
+//        $selectedBoard = $this->request->getGet('board');
+//
+//        $tasks = $taskModel->getTasksWithDetails($selectedBoard);
 
         $spaltenModel = new SpaltenModel();
         $taskartenModel = new TaskartenModel();
@@ -151,5 +155,30 @@ return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
         $taskModel->delete($id);
 
         return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
+    }
+    //Aufgabe 8
+
+    public function postUpdateOrder()
+    {
+        $data = json_decode($this->request->getBody(), true);
+
+        if (!is_array($data)) {
+            return $this->response->setJSON(['success' => false]);
+        }
+
+        $taskModel = new TaskModel();
+
+        foreach ($data as $item) {
+            if (!isset($item['task_id'], $item['spaltenid'], $item['sortid'])) {
+                continue;
+            }
+
+            $taskModel->update($item['task_id'], [
+                'spaltenid' => (int)$item['spaltenid'],
+                'sortid'    => (int)$item['sortid']
+            ]);
+        }
+
+        return $this->response->setJSON(['success' => true]);
     }
 }

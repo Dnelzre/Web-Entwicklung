@@ -1,21 +1,63 @@
 <body>
-<div class="hero">
+<section class="hero-section">
+    <div class="container text-center">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-bold text-dark mb-4">Effizientes <br><span class="text-primary">Projektmanagement</span></h1>
+                <p class="lead text-muted mb-5">
+                    Strukturen schaffen, Prioritäten setzen und Projekte erfolgreich umsetzen.
+                    Ihre zentrale Plattform für moderne Teamarbeit.
+                </p>
+                <a href="<?= base_url('tasks') ?>" class="btn btn-main btn-lg mb-5">Jetzt Starten</a>
+            </div>
+        </div>
+<!--</section>-->
 
-    <div class="shape shape1"></div>
-    <div class="shape shape2"></div>
-    <div class="shape shape3"></div>
+<div class="row g-4 text-start">
+    <div class="col-md-6 col-lg-3">
+        <div class="glass-card p-4">
+            <div class="icon-box"><i class="bi bi-card-checklist"></i></div>
+            <h5 class="fw-bold">Tasks</h5>
+            <p class="small text-muted">Ihre Aufgaben im Fokus: Alle Details, Fristen und Prioritäten übersichtlich in Karten gebündelt.</p>
+        </div>
+    </div>
 
-    <div class="hero-text">
-        <h1 class="gradient-text">Willkommen</h1>
+    <div class="col-md-6 col-lg-3">
+        <div class="glass-card p-4">
+            <div class="icon-box"><i class="bi bi-layers"></i></div>
+            <h5 class="fw-bold">Boards</h5>
+            <p class="small text-muted">Struktur für jedes Projekt: Trennen Sie verschiedene Themenbereiche sauber voneinander.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="glass-card p-4">
+            <div class="icon-box"><i class="bi bi-columns-gap"></i></div>
+            <h5 class="fw-bold">Spalten</h5>
+            <p class="small text-muted">Arbeitsabläufe visualisieren: Definieren Sie individuelle Phasen, die Ihre Aufgaben durchlaufen.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="glass-card p-4">
+            <div class="icon-box"><i class="bi bi-people"></i></div>
+            <h5 class="fw-bold">Personen</h5>
+            <p class="small text-muted">Verantwortung klären: Weisen Sie Aufgaben gezielt Teammitgliedern zu für maximale Transparenz.</p>
+        </div>
     </div>
 </div>
 
-<div class="divider"></div>
-
-<div class="title-section">
-    <h1 class="gradient-text big">Web Entwicklung</h1>
-    <p class="subtitle">Team 03</p>
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-10 mt-4">
+        <div class="p-4 border-top">
+            <p class="text-muted italic">
+                <strong>Das Gesamtsystem:</strong> Ein integriertes Ökosystem, in dem Projekte in Boards strukturiert, durch Spalten in logische Abläufe unterteilt und durch die gezielte Zuweisung an Personen zum Erfolg geführt werden.
+            </p>
+        </div>
+    </div>
 </div>
+</div>
+</section>
 
 <div class="divider"></div>
 

@@ -1,12 +1,16 @@
 <?= $this->include('templates/head') ?>
 
 <div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>Taskboard</h2>
-        <div class="p-3 d-flex">
-            <a href="https://team03.wi1cm.uni-trier.de/public/tasks/create" class="btn btn-primary btn-sm me-2">+ Neu erstellen</a>
-        </div>
-    </div>
+    <div class="card shadow-sm">
+         <div class="card-header d-flex justify-content-between align-items-center">
+             <h4 class="mb-0">Taskboard</h4>
+             <a href="https://team03.wi1cm.uni-trier.de/public/tasks/create"
+                class="btn btn-primary btn-sm">
+                 + Neu erstellen
+             </a>
+         </div>
+
+        <div class="card-body">
 
     <?php // Board-Auswahl ?>
     <?php if (!empty($boards) && is_array($boards)): ?>
@@ -71,9 +75,15 @@
                             <strong><?= htmlspecialchars($colName, ENT_QUOTES, 'UTF-8') ?></strong>
                             <span class="badge bg-secondary"><?= count($colTasks) ?></span>
                         </div>
-                        <div class="card-body" style="max-height:70vh; overflow:auto;">
+<!--                        war schon-->
+<!--                        <div class="card-body" style="max-height:70vh; overflow:auto;">-->
 
-                            <?php if (!empty($colTasks)): ?>
+                        <div class="card-body task-column"
+                             data-spaltenid="<?= htmlspecialchars($colId, ENT_QUOTES, 'UTF-8') ?>"
+                             style="max-height:70vh; overflow:auto;">
+
+
+                        <?php if (!empty($colTasks)): ?>
                                 <?php foreach ($colTasks as $task): ?>
                                     <?php
                                     $id = $get($task, 'id');
@@ -122,7 +132,12 @@
                                     }
                                     ?>
 
-                                    <div class="card mb-3 shadow-sm">
+
+<!--                                    war schon-->
+<!--                                    <div class="card mb-3 shadow-sm">-->
+                                <div class="card mb-3 shadow-sm task-item"
+                                     data-taskid="<?= htmlspecialchars($id, ENT_QUOTES, 'UTF-8') ?>">
+
                                         <div class="card-body p-2">
                                             <div class="d-flex justify-content-between align-items-start mb-1">
                                                 <div class="me-2">
@@ -168,4 +183,57 @@
         <div class="alert alert-info">Keine Spalten definiert. Bitte legen Sie zuerst Spalten an.</div>
     <?php endif; ?>
 
+        </div>
+    </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const containers = document.querySelectorAll('.task-column');
+
+        const drake = dragula([...containers], {
+            moves: function (el) {
+                return el.classList.contains('task-item');
+            }
+        });
+
+        drake.on('drop', function (el, target) {
+
+            const taskId = el.dataset.taskid;
+            const spaltenId = target.dataset.spaltenid;
+
+            // neue Reihenfolge berechnen
+            const tasksInColumn = target.querySelectorAll('.task-item');
+
+            const updates = [];
+            tasksInColumn.forEach((taskEl, index) => {
+                updates.push({
+                    task_id: taskEl.dataset.taskid,
+                    sortid: index,
+                    spaltenid: spaltenId
+                });
+            });
+
+            // AJAX an Server senden
+            fetch('https://team03.wi1cm.uni-trier.de/public/tasks/updateOrder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updates)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.success) {
+                        alert('Fehler beim Speichern');
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    alert('Serverfehler');
+                });
+        });
+
+    });
+</script>
