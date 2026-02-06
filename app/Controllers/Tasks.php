@@ -158,21 +158,17 @@ return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
     }
     //Aufgabe 8
 
-    public function postUpdateOrder()
+    public function updateOrder()
     {
-        $data = json_decode($this->request->getBody(), true);
+        $data = $this->request->getJSON(true);
 
-        if (!is_array($data)) {
+        if (!$data) {
             return $this->response->setJSON(['success' => false]);
         }
 
         $taskModel = new TaskModel();
 
         foreach ($data as $item) {
-            if (!isset($item['task_id'], $item['spaltenid'], $item['sortid'])) {
-                continue;
-            }
-
             $taskModel->update($item['task_id'], [
                 'spaltenid' => (int)$item['spaltenid'],
                 'sortid'    => (int)$item['sortid']

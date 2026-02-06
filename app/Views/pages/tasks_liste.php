@@ -75,9 +75,6 @@
                             <strong><?= htmlspecialchars($colName, ENT_QUOTES, 'UTF-8') ?></strong>
                             <span class="badge bg-secondary"><?= count($colTasks) ?></span>
                         </div>
-<!--                        war schon-->
-<!--                        <div class="card-body" style="max-height:70vh; overflow:auto;">-->
-
                         <div class="card-body task-column"
                              data-spaltenid="<?= htmlspecialchars($colId, ENT_QUOTES, 'UTF-8') ?>"
                              style="max-height:70vh; overflow:auto;">
@@ -131,10 +128,6 @@
                                         }
                                     }
                                     ?>
-
-
-<!--                                    war schon-->
-<!--                                    <div class="card mb-3 shadow-sm">-->
                                 <div class="card mb-3 shadow-sm task-item"
                                      data-taskid="<?= htmlspecialchars($id, ENT_QUOTES, 'UTF-8') ?>">
 
@@ -186,37 +179,38 @@
         </div>
     </div>
 </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
 
-        const containers = document.querySelectorAll('.task-column');
+        const columns = document.querySelectorAll('.task-column');
 
-        const drake = dragula([...containers], {
-            moves: function (el) {
-                return el.classList.contains('task-item');
-            }
-        });
+        if (!columns.length) return;
 
-        drake.on('drop', function (el, target) {
+        const drake = dragula(Array.from(columns));
 
-            const taskId = el.dataset.taskid;
-            const spaltenId = target.dataset.spaltenid;
-
-            // neue Reihenfolge berechnen
-            const tasksInColumn = target.querySelectorAll('.task-item');
+        drake.on('drop', function () {
 
             const updates = [];
-            tasksInColumn.forEach((taskEl, index) => {
-                updates.push({
-                    task_id: taskEl.dataset.taskid,
-                    sortid: index,
-                    spaltenid: spaltenId
+
+            // alle Spalten + Reihenfolgen neu berechnen
+            document.querySelectorAll('.task-column').forEach(column => {
+
+                const spaltenId = column.getAttribute('data-spaltenid');
+
+                column.querySelectorAll('.task-item').forEach(function (taskEl, index) {
+
+                    updates.push({
+                        task_id: taskEl.getAttribute('data-taskid'),
+                        spaltenid: spaltenId,
+                        sortid: index
+                    });
+
                 });
             });
 
-            // AJAX an Server senden
-            fetch('https://team03.wi1cm.uni-trier.de/public/tasks/updateOrder', {
+            console.log("Sende Updates:", updates); // DEBUG
+
+            fetch('<?= base_url("tasks/updateOrder") ?>', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -225,14 +219,13 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                    if (!data.success) {
-                        alert('Fehler beim Speichern');
-                    }
+                    console.log("Server Antwort:", data);
                 })
-                .catch(err => {
-                    console.error(err);
-                    alert('Serverfehler');
+                .catch(error => {
+                    console.error(error);
+                    alert('Speichern fehlgeschlagen');
                 });
+
         });
 
     });
