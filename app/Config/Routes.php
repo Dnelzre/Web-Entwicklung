@@ -57,6 +57,3 @@ $routes->post('tasks/updateOrder', 'Tasks::updateOrder');
 */
 
 $routes->setAutoRoute(true);
-
-
-

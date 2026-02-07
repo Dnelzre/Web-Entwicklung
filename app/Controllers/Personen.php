@@ -6,21 +6,7 @@ use App\Models\PersonenModel;
 
 class Personen extends BaseController
 {
-//    public function getindex()
-//    {
-//        $model = new PersonenModel();
-//        $personen = $model->getData();
-//
-//        return view('templates/head')
-//            . view('templates/navbar')
-//            . view('pages/personen', [
-//                'personen' => $personen
-//            ])
-//            . view('templates/footer');
-//    }
-//}
-
-    public function getIndex()
+    public function index()
     {
         $model = new PersonenModel();
         $search = $this->request->getGet('search');
