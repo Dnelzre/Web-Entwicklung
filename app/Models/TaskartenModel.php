@@ -12,6 +12,6 @@ class TaskartenModel extends Model
 
     public function getData()
     {
-        return $this->findAll();
+     return $this->findAll();
     }
 }
