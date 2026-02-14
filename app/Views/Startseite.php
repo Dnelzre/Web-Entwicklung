@@ -11,7 +11,6 @@
                 <a href="<?= base_url('tasks') ?>" class="btn btn-main btn-lg mb-5">Jetzt Starten</a>
             </div>
         </div>
-<!--</section>-->
 
 <div class="row g-4 text-start">
     <div class="col-md-6 col-lg-3">
@@ -58,6 +57,13 @@
 </div>
 </div>
 </section>
+
+<div class="d-flex justify-content-center my-5">
+    <a href="<?= base_url('dashboard') ?>"
+       class="btn btn-primary btn-lg px-5 py-3 shadow-sm rounded-pill custom-dashboard-btn">
+        <i class="fas fa-rocket me-2"></i> Zum Dashboard gehen
+    </a>
+</div>
 
 <div class="divider"></div>
 
@@ -119,4 +125,3 @@
 <div class="spacer"></div>
 
 </body>
-

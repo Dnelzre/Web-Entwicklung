@@ -26,8 +26,8 @@
 
                     <div class="card-body p-4 p-md-5">
                         <?= view('pages/_spalten_form', [
-                            'spalte' => $spalte,
-                            'formAction' => $formAction
+                                'spalte' => $spalte,
+                                'formAction' => $formAction
                         ]) ?>
                     </div>
                 </div>

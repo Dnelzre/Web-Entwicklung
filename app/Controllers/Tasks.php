@@ -73,6 +73,7 @@ class Tasks extends BaseController
         return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
     }
 
+
     $data = [
         'personenid'      => $this->request->getPost('personenid'),
         'taskartenid'     => $this->request->getPost('taskartenid'),
@@ -127,6 +128,7 @@ return redirect()->to('https://team03.wi1cm.uni-trier.de/public/tasks');
         if (!$this->validate($rules)) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
+
 
         $data = [
             'personenid'      => $this->request->getPost('personenid'),

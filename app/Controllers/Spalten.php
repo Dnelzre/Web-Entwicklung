@@ -69,12 +69,14 @@ class Spalten extends BaseController
 
         if (!$spalte) {
             return redirect()->to('https://team03.wi1cm.uni-trier.de/public/spalten');
+
         }
 
         $data = [
             'spalte' => $spalte,
             'title'  => 'Spalte bearbeiten',
             'formAction' => 'https://team03.wi1cm.uni-trier.de/public/spalten/submit/' . $id
+
         ];
 
         return view('templates/head')
