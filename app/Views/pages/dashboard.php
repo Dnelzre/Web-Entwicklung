@@ -16,10 +16,8 @@
                 sowie vorhandenen Boards.
             </p>
 
-            <!-- Statistik-Karten -->
             <div class="row g-4 justify-content-center text-center">
 
-                <!-- Personen -->
                 <div class="col-md-3 d-flex justify-content-center">
                     <a href="/personen" class="text-decoration-none text-dark w-100">
                         <div class="glass-card p-4 h-100">

@@ -2,14 +2,16 @@
     <div class="card shadow-sm">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h4 class="mb-0">Spalten</h4>
+
                 <button
                         type="button"
-                        class="btn btn-primary btn-sm"
+                        class="btn btn-primary btn-sm rounded-pill px-3"
                         data-bs-toggle="modal"
                         data-bs-target="#spaltenCreateModal"
                 >
                     + Neu erstellen
                 </button>
+
             </div>
 
         <div class="card-body">

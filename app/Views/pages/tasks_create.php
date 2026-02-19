@@ -123,4 +123,5 @@ $isEdit = !empty($task);
         </div>
     </div>
 </div>
+<div class="spacer"></div>
 </body>

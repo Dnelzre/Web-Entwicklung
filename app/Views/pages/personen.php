@@ -17,7 +17,7 @@
                         </button>
                     </form>
 
-                    <a href="/personen/create" class="btn btn-primary btn-sm">+ Neu anlegen</a>
+                    <a href="/personen/create" class="btn btn-primary btn-sm rounded-pill px-3">+ Neu anlegen</a>
                 </div>
         </div>
 

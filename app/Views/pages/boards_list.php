@@ -5,7 +5,7 @@
 
         <div class="card-header d-flex justify-content-between align-items-center">
             <h4 class="mb-0">Board</h4>
-            <a href="https://team03.wi1cm.uni-trier.de/public/boards/create" class="btn btn-primary btn-sm">+ Neu erstellen</a>
+            <a href="https://team03.wi1cm.uni-trier.de/public/boards/create" class="btn btn-primary btn-sm rounded-pill px-3">+ Neu erstellen</a>
         </div>
 
         <div class="card-body">
