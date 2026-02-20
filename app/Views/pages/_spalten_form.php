@@ -19,9 +19,22 @@
                    value="<?= old('sortid', $spalte['sortid'] ?? 100) ?>">
         </div>
         <div class="col-md-6">
-            <label class="form-label">Board ID</label>
-            <input type="number" name="boardsid" class="form-control"
-                   value="<?= old('boardsid', $spalte['boardsid'] ?? 1) ?>">
+            <label class="form-label">Board <span class="text-danger">*</span></label>
+            <select name="boardsid" class="form-select" required>
+                <option value="">-- Board auswählen --</option>
+                <?php if (!empty($boards)): ?>
+                    <?php foreach ($boards as $board): ?>
+                        <?php
+                        $boardId = $board['id'] ?? $board->id;
+                        $boardName = $board['name'] ?? $board->name;
+                        $selected = old('boardsid', $spalte['boardsid'] ?? '') == $boardId ? 'selected' : '';
+                        ?>
+                        <option value="<?= esc($boardId) ?>" <?= $selected ?>>
+                            <?= esc($boardName) ?> (ID: <?= esc($boardId) ?>)
+                        </option>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </select>
         </div>
     </div>
 

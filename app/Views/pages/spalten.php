@@ -1,18 +1,18 @@
 <div class="container mt-4">
     <div class="card shadow-sm">
-            <div class="card-header d-flex justify-content-between align-items-center">
-                <h4 class="mb-0">Spalten</h4>
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Spalten</h4>
 
-                <button
-                        type="button"
-                        class="btn btn-primary btn-sm rounded-pill px-3"
-                        data-bs-toggle="modal"
-                        data-bs-target="#spaltenCreateModal"
-                >
-                    + Neu erstellen
-                </button>
+            <button
+                    type="button"
+                    class="btn btn-primary btn-sm rounded-pill px-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#spaltenCreateModal"
+            >
+                + Neu erstellen
+            </button>
 
-            </div>
+        </div>
 
         <div class="card-body">
             <?php if (session()->getFlashdata('errors')): ?>
@@ -67,10 +67,10 @@
                         <div class="modal-header">
                             <h5 class="modal-title">Neue Spalte erstellen</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                         </div>
+                        </div>
                         <div class="modal-body">
-                         <?php $data['formAction'] = ('https://team03.wi1cm.uni-trier.de/public/spalten/submit'); ?>
-                         <?= view('pages/_spalten_form', $data) ?>
+                            <?php $data['formAction'] = ('https://team03.wi1cm.uni-trier.de/public/spalten/submit'); ?>
+                            <?= view('pages/_spalten_form', $data) ?>
                         </div>
                     </div>
                 </div>
